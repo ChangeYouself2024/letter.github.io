@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta name="title" content="小孙同学">
+	<meta name="github" content="https://github.com/sun0225SUN/Awesome-Love-Code">
+	<meta name="describe" content="收集不易，您的star是我坚持的动力，同时也欢迎各位PR哦! ">
+	<link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/sun0225SUN/photos/img/20210715233345.png">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">##</span><br />
+				<span class="comments"># 深呼吸！呼～呼～呼～</span><br />
+				<span class="comments"># 这是给你写的第二篇小作文，我仍然叫“不紧张”～😃</span><br />
+				<br />
+				<span class="comments">##</span><br />
+				<span class="comments"># 今天是2025年4月6日,</span><br />
+				<span class="comments"># 时间过的是真快，我们已经认识了38天、一个多月了</span><br />
+				<span class="comments"># 我们3月8日吃过的第一顿饭是鑫方老鸭汤，看的第一场电影是《唐探1900》</span><br />
+				<span class="comments"># 然后我们还逛过了中国电影博物馆、北京动物园，对了对了，还有一个鱼你在一起快餐，哈哈哈～</span><br />
+				<span class="comments"># 看到这儿是不是感觉压力已经已经上来了？nonono，放轻松～</span><br />
+				<span class="comments"># 说到这儿，其实我脑袋也有点儿混乱😂不知道从哪个地方说起，那就从我当前时间段我的感受和最想知道的答案说起吧</span><br />
+				<span class="comments"># 咳咳咳，准备好了昂，我要表达一下当前阶段下我的感受了</span><br />
+				<br />
+				<span class="comments">##</span><br />
+				<span class="comments"># 首先就是这段时间呢，我从最开始的急切，变成了现在的顺其自然</span><br />
+				<span class="comments"># 因为这段时间我意识到一个问题：对的人肯定会在一起，只是早晚的事情而已</span><br />
+				<span class="comments"># 其次就是，这段时间我在规划短期内未来的生活，就是你说的要对自己负责任嘛</span><br />
+				<span class="comments"># 规划第一点就是：其实我还是对研究生有“执念”，想考取一个研究生，哪怕是在职的，不光是为了自己的未来，还是为了在以后我转正的时候能给你一个基本的保障</span><br />
+				<span class="comments"># （PS：莫要有压力、莫要有压力，小作文嘛，总会难免涉及到这些内容的）</span><br />
+				<span class="comments"># 规划第二点就是：等到你找到工作了，我也打算搬个家啦，搬到一个距离你和我工作的地方都稍微近一点儿的，这样的话我既能节省点时间，还能偶尔去找你“蹭个饭”哈哈～</span><br />
+				<span class="comments"># 目前就只有这两点规划啦，至于未来在哪儿定居啦、要不要换城市啦，这些都等以后再慢慢规划吧，时间还长着呢～</span><br />
+				<span class="comments"># 其实还有好多话没有说粗来的，但是当前情况不适合说，留着给你以后听吧🤭</span><br />
+				<span class="comments"># 以上就是我当前阶段的一些感受和想法啦～</span><br />
+				<br />
+				<span class="comments">##</span><br />
+				<span class="comments"># 接下来我要抛出我的问题啦，准备接招吧</span><br />
+				<span class="comments"># 其实我的问题也很简单，就是想问问你，这段时间的心路历程，仅此而已，哈哈哈～</span><br />
+				<span class="comments"># 我洗耳恭听😜</span><br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						我们已经认识了：
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						致永远的我们<br />
+						<div class="signature"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		// 此处月份介于 0 ~ 11 之间。用本地时间表示，如 8 月要用 7 表示。
+		together.setFullYear(2025, 1, 27);
+		together.setHours(10);
+		together.setMinutes(2);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+			document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+
+</html>
